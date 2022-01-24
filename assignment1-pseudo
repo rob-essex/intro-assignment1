@@ -1,0 +1,58 @@
+#### Global Variables - used throughout all functions ####
+master_list = []
+company_index = 0
+
+#### Main menu function ####
+def main_menu():
+# Prompt user for desired action
+action = input(‘‘‘Select function: 
+	Add new company – type ADD
+	Search company – type SEARCH
+	Update company – type UPDATE
+	Delete company – type DELETE’’’)
+
+#### Add company function ####
+def add_company():
+global company_index 
+Company_ID = company_index #creates the unique identifier
+
+# Prompt the user for each of the company data elements
+Company_Name = input(“Type company name:”)
+DUNS = int(input(“Type company DUNS number:”)
+…
+# (repeats input for each following element in Table 2)
+
+# Assign all input variables to the company’s dictionary
+Company_dict = {“Company ID”:Company_ID, “Company Name”:Company_Name,…}
+
+# Append the dictionary to the master list, increment the company index +=1
+master_list.append(company_dict)
+company_index +=1
+# Print confirmation and return to main menu
+
+#### Search company function ####
+def search_company():	
+search = input(“Type desired company name:”) # Get user search query
+for comp in master_list: # Loop to search through dictionaries in list
+	if comp[‘Company Name’] == search: # match query to name 
+		# Iterate over dictionary to print keys and values
+		# Return to main menu
+
+
+#### Update company function ####
+def update_company():
+# perform same search function as above, display company record
+update_yn = input(“Would you like to update this company? Y/N”)
+If update_yn == “Y”
+	# Prompt user for updates on company data fields
+	# Print updated record and confirmation, return user to main menu
+
+
+#### Delete company function ####
+def delete_company():
+# perform same search function as above, display company record
+delete_yn = input(“Are you sure you wish to delete this company? Y/N”) 
+If update == “Y”
+	master_list.remove(# index passed from search)
+	# Print delete confirmation, return user to main menu
+
